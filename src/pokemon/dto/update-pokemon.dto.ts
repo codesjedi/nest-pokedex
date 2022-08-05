@@ -1,4 +1,18 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreatePokemonDto } from './create-pokemon.dto';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+  IsString,
+  Min,
+} from 'class-validator';
 
-export class UpdatePokemonDto extends PartialType(CreatePokemonDto) {}
+export class UpdatePokemonDto {
+  @IsString()
+  @IsNotEmpty()
+  name: string;
+
+  @IsNumber()
+  @IsPositive()
+  @Min(1)
+  no: number;
+}

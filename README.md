@@ -18,7 +18,13 @@
    ```
     docker-compose up -d
    ```
-5. Seed the local database
+5. Clonar el archivo ```.env.example``` y renombrar la copia a ```.env```
+6. Llenar las variables de entorno definidas en el ```.env```
+7. Ejecutar la aplicación en dev:
+   ```
+   yarn start:dev
+   ```
+8. Seed the local database
    ```
     GET http://localhost:3000/api/v2/seed
    ```

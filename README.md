@@ -18,6 +18,10 @@
    ```
     docker-compose up -d
    ```
+5. Seed the local database
+   ```
+    GET http://localhost:3000/api/v2/seed
+   ```
 
 ### Tech Stack
 1. Nestjs

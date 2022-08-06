@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Delete, Get } from '@nestjs/common';
 
 import { SeedService } from './seed.service';
 
@@ -9,5 +9,10 @@ export class SeedController {
   @Get()
   executeSeed() {
     return this.seedService.populateDatabase();
+  }
+
+  @Delete()
+  executeDrop() {
+    return this.seedService.dropDatabase();
   }
 }
